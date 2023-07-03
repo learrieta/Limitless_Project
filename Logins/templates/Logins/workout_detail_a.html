@@ -1,0 +1,150 @@
+{% load static %}
+{% block content %}
+<div class="container-fluid background-color-dash_w">
+    
+    {% for usu in project %} 
+        {% if usu.day_of_week == 'MON' and dayof == 'Monday' %}
+            
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"   src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% elif usu.day_of_week == 'TUE' and dayof == 'Tuesday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% elif usu.day_of_week == 'WED' and dayof == 'Wednesday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% elif usu.day_of_week == 'THU' and dayof == 'Thursday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% elif usu.day_of_week == 'FRI' and dayof == 'Friday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% elif usu.day_of_week == 'SAT' and dayof == 'Saturday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+            
+        {% elif usu.day_of_week == 'SUN' and dayof == 'Sunday' %}
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    <div class="col-md-6">
+                        <div>
+                            <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{usu.exercise.name}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Sets:</strong>&nbsp; {{usu.sets}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Reps:</strong>&nbsp; {{usu.reps}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Rest Time:</strong> &nbsp;{{usu.rest_time}}</h5>
+                            <h5 class="workout_exercise_definition" > <strong>Description: </strong>&nbsp;{{usu.exercise.description}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Muscle Group:</strong>&nbsp; {{usu.exercise.muscle_group}}</h5>
+                            <h5 class="workout_exercise_definition" ><strong>Equipment:</strong> &nbsp;{{usu.exercise.equipment_required}}</h5>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <img   class = "img-thumbnail " style="height: 300px; width: 200px!important; margin-top: 150px; margin-left: 200px;"  src="{{usu.exercise.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

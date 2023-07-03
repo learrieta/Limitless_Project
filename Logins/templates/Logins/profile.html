@@ -1,0 +1,98 @@
+
+{% load static %}
+{% block content %}
+<div class="container-fluid background-color-dash">
+    <div class="row pb-lg-2">
+        {% for i in userp %}
+        <div class="row">
+            <div class="col-md-6">
+                <p class="profile_name">{{i.user.first_name}}</p>
+                <p class="profile_age"> <strong>Age</strong> : {{i.age}}</p>
+                <p class="profile_bio"><strong>Height</strong> : {{i.height}}</p>
+                <p class="profile_bio"><strong>Weight</strong> : {{i.weight}}</p>
+                <p class="profile_bio"><strong>Bio</strong> : {{i.bio}}</p>
+                
+            </div>
+            <div class="col-md-6  div_profile">
+                <div class="">
+                    <img  class="img-thumbnail profile_picture" src="{{i.imageUrl}}">
+                </div>
+            </div>
+        </div>
+        <div class="row pb-lg-2">
+            <div class="col bg-light p-4 border custom_border">
+                <div class="row">
+                    <p class="profile_workout"><strong>{{i.recommended_workout}}</strong></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Workouts</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="workout_title_day" style="color: #8d939f;" >Today <i class="fa-solid fa-caret-down" style="color: #8d939f;">&nbsp;&nbsp;{{ dayof }}</i></h5>
+                    </div>
+                </div>
+            {% for usu in usere %}         
+                {% if usu.day_of_week == 'MON' and dayof == 'Monday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+                
+                {% elif usu.day_of_week == 'TUE' and dayof == 'Tuesday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+                
+                {% elif usu.day_of_week == 'WED' and dayof == 'Wednesday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+                
+                {% elif usu.day_of_week == 'THU' and dayof == 'Thursday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+
+                {% elif usu.day_of_week == 'FRI' and dayof == 'Friday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+
+                {% elif usu.day_of_week == 'SAT' and dayof == 'Saturday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+                {% elif usu.day_of_week == 'SUN' and dayof == 'Sunday' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <h5 class="workout_title" >{{usu.exercise.name}}</h5>
+                    </div>
+
+                {% endif %}
+            {% endfor %}      
+            </div>
+            <div class="col bg-light p-4 border custom_border">
+                <div class="row">
+                    <p class="profile_workout1"> Meal Prep: </p>
+                </div>
+                <div class="row">
+                    <p class="profile_workout"><strong>{{i.recommended_meal}}</strong></p>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" >helo</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" >helo</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" >helo</h5> 
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+        
+
+    
+</div>
+{% endblock%}

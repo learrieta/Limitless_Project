@@ -1,0 +1,303 @@
+
+{% load static %}
+{% block content %}
+<div class="container-fluid background-color-dash">
+    <div class="row pb-lg-2">
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Workouts</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_day" style="color: #8d939f;" >Today <i class="fa-solid fa-caret-down" style="color: #8d939f;">&nbsp;&nbsp;{{ dayof }}</i></h5>
+                </div>
+            </div>  
+            {% for usu in usere %}         
+                {% if usu.day_of_week == 'MON' and dayof == 'Monday' and usu.training_level == 'B' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'MON' and dayof == 'Monday' and usu.training_level == 'I' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'MON' and dayof == 'Monday' and usu.training_level == 'A' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'TUE' and dayof == 'Tuesday' and usu.training_level == 'B' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'TUE' and dayof == 'Tuesday' and usu.training_level == 'I' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'TUE' and dayof == 'Tuesday' and usu.training_level == 'A' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'WED' and dayof == 'Wednesday' and usu.training_level == 'B' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'WED' and dayof == 'Wednesday' and usu.training_level == 'I' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'WED' and dayof == 'Wednesday' and usu.training_level == 'A'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                
+                {% elif usu.day_of_week == 'THU' and dayof == 'Thursday' and usu.training_level == 'B'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'THU' and dayof == 'Thursday' and usu.training_level == 'I'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'THU' and dayof == 'Thursday' and usu.training_level == 'A'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+
+                {% elif usu.day_of_week == 'FRI' and dayof == 'Friday' and usu.training_level == 'B' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'FRI' and dayof == 'Friday' and usu.training_level == 'I'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'FRI' and dayof == 'Friday' and usu.training_level == 'A' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+
+                {% elif usu.day_of_week == 'SAT' and dayof == 'Saturday' and usu.training_level == 'B' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'SAT' and dayof == 'Saturday' and usu.training_level == 'I' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'SAT' and dayof == 'Saturday' and usu.training_level == 'A' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'SUN' and dayof == 'Sunday' and usu.training_level == 'B'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_b' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'SUN' and dayof == 'Sunday' and usu.training_level == 'I'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_i' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+                {% elif usu.day_of_week == 'SUN' and dayof == 'Sunday' and usu.training_level == 'A'%}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_workout_a' %}"><h5 class="workout_title" >{{usu.exercise}}</h5></a>
+                    </div>
+
+                {% endif %}
+            {% endfor %}      
+        </div>
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Meals</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_day" style="color: #8d939f;" >Today <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>        
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5>
+            </div>
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5>
+            </div>
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5> 
+            </div>
+        </div>
+    </div>
+    <div class="row">         
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Monthly Goals</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Weekly <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>    
+            {% for i in userp %}      
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title"><strong>Weight Goal: </strong>{{i.monthly_goals1}}</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" ><strong>General Goal: </strong>{{i.monthly_goals2}}</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" > <strong> Goals:</strong> {{i.monthly_goals3}}</h5>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Categories</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Weekly <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>   
+            {% for i in userp %}     
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" ><strong> Workout:</strong> {{i.recommended_workout}}</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" ><strong>Meal:</strong> {{i.recommended_meal}}</h5>
+                </div>
+                <div class="row bg-light p-1 border  workout_individual">
+                    <h5 class="workout_title" ><strong>Training Level:</strong> {{i.training_level}}</h5>
+                </div>
+            {% endfor %}
+        </div>
+        
+        
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Nutrition</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="row bg-light p-2 border  workout_individual_moon">
+                        <h5 >helo</h5>
+                    </div>
+                    <div class="row bg-light p-2 border workout_individual_moon">
+                        <h5>helo</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/oegrrprk.json"
+                        trigger="hover"
+                        colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#646e78,quaternary:#121331"
+                        style="width:180px;height:180px"
+                        class="graph_nutrition">
+                        
+                    </lord-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Sleep</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>
+            {% for i in userp %} 
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="row bg-light p-2 border  workout_individual_moon">
+                            <h5 >Recommended Sleep: 8 Hours</h5>
+                        </div>
+                        <div class="row bg-light p-2 border workout_individual_moon">
+                            <h5> Goals: {{i.sleep_goals}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                        <lord-icon
+                            class="moon_graph"
+                            src="https://cdn.lordicon.com/qmbxvtja.json"
+                            trigger="hover"
+                            colors="primary:#8930e8,secondary:#66d7ee"
+                            style="width:180px;height:180px"
+                            id="my-glyphicon">
+                        </lord-icon>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Latest News!</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Weekly <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>        
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5>
+            </div>
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5>
+            </div>
+            <div class="row bg-light p-1 border  workout_individual">
+                <h5 class="workout_title" >helo</h5>
+            </div>
+        </div>
+        <div class="col bg-light p-4 border custom_border">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Water</h4>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                </div>
+            </div>
+            {% for i in userp %} 
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="row bg-light p-2 border  workout_individual_moon">
+                            <h5 >Recommended Water: 3 Liters</h5>
+                        </div>
+                        <div class="row bg-light p-2 border workout_individual_moon">
+                            <h5>Goals: {{i.water_goals}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/ysfnohsr.json"
+                            trigger="hover"
+                            colors="primary:#4bb3fd,secondary:#ebe6ef"
+                            style="width:200px;height:200px"
+                            class="water_graph"
+                        >
+                        </lord-icon>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+    
+</div>
+{% endblock%}

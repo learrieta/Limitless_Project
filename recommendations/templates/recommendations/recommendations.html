@@ -1,0 +1,21 @@
+{% extends  'main.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Recommended Plan</h1>
+
+{% if recommendation %}
+    <h2>Meal Plan</h2>
+    <p>Name: {{ recommendation.recommended_meal.name }}</p>
+    <p>Start date: {{ recommendation.recommended_meal.start_date }}</p>
+    <p>End date: {{ recommendation.recommended_meal.end_date }}</p>
+
+    <h2>Workout</h2>
+    <p>Name: {{ recommendation.recommended_workout.name }}</p>
+    <p>Description: {{ recommendation.recommended_workout.description }}</p>
+    <p>Duration: {{ recommendation.recommended_workout.duration }}</p>
+{% else %}
+    <p>No recommendations available.</p>
+{% endif %}
+
+{% endblock %}

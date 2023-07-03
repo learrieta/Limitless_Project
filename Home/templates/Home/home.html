@@ -1,0 +1,166 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<section class="about_me_section">
+    <div class="video-container">
+        <video autoplay muted loop class="peru_video">
+            <source class="videos" src="{% static 'images/home_page/limitless.mp4' %}">
+        </video>
+        <h1>Your Journey Awaits</h1>
+        <p>What are you waiting for?</p>
+        <div class='hero-btns'>
+            <Button class='btns--get--started' >
+                Get Started
+            </Button>
+            <Button class='btns--watch--trailer'>
+                Watch Trailer <i class="fa-regular fa-circle-play"></i>
+            </Button>
+        </div>
+    </div>    
+</section>
+<section class="epic_workouts_section">
+    <div class="container">
+        <h1 class="check_epic_title">Check these Epic Workouts:</h1>
+        <div class="row p-5">
+            <div class="col-sm-6">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <figure class="home_card_figure">
+                            <img src="{% static 'images/home_page/chestworkout.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                            <figcaption class="figs_caps"> Full Gym Chest Workout</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card-body home_card_padding">
+                      <p class="card-text home_card_text">Add inches to your chest fast with this muscle-building workout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <figure class="home_card_figure">
+                            <img src="{% static 'images/home_page/absgym.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                            <figcaption class="figs_caps"> Abs & Core</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card-body home_card_padding">
+                      <p class="card-text home_card_text">Finish off your six-pack with these simple fat burning strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <figure class="home_card_figure">
+                            <img src="{% static 'images/home_page/armgym.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                            <figcaption class="figs_caps"> Arm Workout</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card-body home_card_padding">
+                      <p class="card-text home_card_text">Feel the pump in your veins with this arm workout.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <figure class="home_card_figure">
+                            <img src="{% static 'images/home_page/cardiogym.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                            <figcaption class="figs_caps"> Cardio</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card-body home_card_padding">
+                      <p class="card-text home_card_text">Sprint into shape with this high intensity cardio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <figure class="home_card_figure">
+                            <img src="{% static 'images/home_page/success.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                            <figcaption class="figs_caps"> Legs </figcaption>
+                        </figure>
+                    </a>
+                    <div class="card-body home_card_padding">
+                      <p class="card-text home_card_text">Finish off the day with this amazing leg workout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recipes_section">
+    <div class="container">
+        <h1 class="check_epic_title">Check these healthy recipes:</h1>
+        <div class="row p-5">
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <img src="{% static 'images/home_page/salmon.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                    </a>
+                    <div class="card-body home_card_padding">
+                        <h4 class="card-title home_card_ttext">Pan-Seared Salmon with Kale</h4>
+                        <p class="card-text home_card_tetext">The star of this dish is the kale salad. It's crunchy, tangy and sweet!.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <img src="{% static 'images/home_page/parmesan.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                    </a>
+                    <div class="card-body home_card_padding">
+                        <h4 class="card-title home_card_ttext">Air Fryer Parmesan Chicken</h4>
+                        <p class="card-text home_card_tetext">This chicken gets incredibly crunchy, thanks to a light coating of panko. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card home_workout_cards"  >
+                    <a class="home_card_links">
+                        <img src="{% static 'images/home_page/smoothie.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                    </a>
+                    <div class="card-body home_card_padding">
+                        <h4 class="card-title home_card_ttext">Mixed Berries and Banana Smoothie</h4>
+                        <p class="card-text home_card_tetext">If you've got just 5 minutes, you've got time to blend up this nutrient-packed </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="latest_news_section">
+    <div class="container">
+        <h1 class="check_epic_title">Latest News!</h1>
+        <div class="row p-5">
+            <div class="col-sm-6">
+                <div class="card home_workout_cards">
+                    <a class="home_card_links" href="https://www.menshealth.com/health/a42710573/new-blood-donation-guidelines/">
+                        <img src="{% static 'images/home_page/article1.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                    </a>
+                    <div class="card-body home_card_padding">
+                        <h4 class="card-title home_card_ttext">New Blood Donation Guidelines</h4>
+                        <p class="card-text home_card_tetext">Drug Administration has approved new blood donation guidelines, a huge step in the right direction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card home_workout_cards">
+                    <a class="home_card_links" href="https://www.menshealth.com/entertainment/g28645511/fast-and-furious-movies-ranked/">
+                        <img src="{% static 'images/home_page/article2.jpg' %}" class="card-img-top home_workout_images " alt="...">
+                    </a>
+                    <div class="card-body home_card_padding">
+                        <h4 class="card-title home_card_ttext">Newest Fast & Furious Movie!</h4>
+                        <p class="card-text home_card_tetext">This upcoming movie is packed with action, heart, and many mnay races. Taking us back to its roots.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% endblock%}

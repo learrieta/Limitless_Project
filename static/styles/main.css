@@ -1,0 +1,530 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+/*NAVBAR*/
+
+.navbar{
+    background: linear-gradient(90deg, rgb(20, 19, 19) 0%, rgb(26, 23, 23) 100%);
+    font-family: 'PT Sans';
+
+}
+
+
+.logo {
+    all: unset;
+    font-family: 'PT Sans';
+    text-align: center;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.nav-item a{
+    color: #ffffff !important;
+    cursor: pointer;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 20px;
+}
+.nav-item-B a{
+    color: #ffffff !important;
+    cursor: pointer;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 20px;
+}
+.signup-button {
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: initial;
+    color: #fff;
+    transition: all .3s ease-out;
+    font-size: 18px;
+    border: 1px solid #fff;
+    margin: 0 20px;
+}
+.sign-upb{
+    text-decoration: none;
+}
+
+/*Home Section*/
+
+.about_me_section{
+    padding-bottom: 30px;
+}
+
+.video-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    z-index: -1;
+}
+.video-container {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+    
+.video-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -100px;
+}
+.video-container > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.hero-btns {
+    margin-top: 32px;
+}
+
+.hero-btns .btnswatch--trailer, .btns--get--started {
+    margin: 10px;
+}
+
+.fa-play-circle {
+    margin-left: 4px;
+}
+
+.btns--get--started{
+    font-size: 30px;
+    padding: 12px 26px;
+    background-color: initial;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    outline: none;
+}
+.btns--watch--trailer{
+    font-size: 30px;
+    padding: 12px 26px;
+    border: 1px solid #fff;
+    color: #242424;
+    cursor: pointer;
+    outline: none;
+}
+
+.btns--get--started:hover{
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+}
+
+/*Epic Workout Section*/
+
+.epic_workouts_section{
+    padding-bottom: 20px;
+}
+.check_epic_title{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.home_workout_cards{
+    border-radius: 15px;
+}
+
+.home_card_links{
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(56,125,255,.17);
+    filter: drop-shadow(0 6px 20px rgba(56,125,255,.017));
+    text-decoration: none;
+    cursor: pointer;
+}
+.home_card_figure{
+    margin: 0;
+}
+.home_workout_images{
+    position: relative;
+    z-index: -1;
+}
+.figs_caps{
+    background-color: #1f98f4 !important;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    max-width: 40%;
+    margin-top: -23px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+.home_card_padding{
+    padding: 20px 30px 30px !important;
+}
+.home_card_text{
+    color: #252e48;
+    font-size: 20px;
+    line-height: 24px;
+}
+.padding_for_second_row{
+    padding-top: 50px;
+}
+
+/*Recipes Section*/
+.recipes_section{
+    padding-bottom: 20px;
+}
+.home_card_ttext{
+    color: #252e48;
+    font-size: 20px;
+    line-height: 24px;
+}
+.home_card_tetext{
+    color: #252e48;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: lighter !important;
+}
+
+
+/*SIGN-UP-FORM*/
+
+.forms_container{
+    background: url(/static/images/home_page/cous.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sign_up_section{
+    background: white;
+    font-family: 'PT Sans';
+    color: #000000;
+    width: 500px;
+    height: 1520px;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 5px;
+}
+.sign_in_section{
+    background: white;
+    font-family: 'PT Sans';
+    color: #000000;
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 5px;
+}
+.ul_customization{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.nav-pills .nav-link.active {
+    --bs-nav-pills-border-radius: 0.375rem;
+    --bs-nav-pills-link-active-bg: #000 !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--bs-nav-pills-link-active-bg);
+}
+
+.sign_up_with{
+    font-size: 18px !important;
+}
+.forgot_password{
+    color: #000 !important;
+}
+.sign_in_button{
+    background-color: #000 !important;
+    font-size: 18px !important;
+}
+.submit_btn_login{
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 30px;
+}
+.sign_up_with_me{
+    font-size: 18px !important;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.submit_btn_login1{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+/*PROFILE DASHBOARD*/
+.xt-blog-form{
+    margin-left: 80px;
+}
+.vl {
+    border-left: 3px solid rgb(255, 255, 255);
+    height: 30px;
+    margin-top: 10px;
+}
+.nav-name{
+    color: #ffffff !important;
+    cursor: pointer;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    margin: 12px 30px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background: linear-gradient(90deg, rgb(20, 19, 19) 0%, rgb(26, 23, 23) 100%);
+    font-family: 'PT Sans';
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-top: 70px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+  
+  /* The navigation menu links */
+.sidenav a {
+    padding: 30px 30px 30px 32px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    padding-left: 40px;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    /* right: 25px; */
+    font-size: 36px;
+    margin-left: 136px;
+    margin-top: -40px;
+}
+#main {
+    transition: margin-left .5s;
+}
+
+/*Actual Dashboard*/
+.custom_border{
+    margin: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.dashboard_section{
+    background: linear-gradient(90deg, rgb(20, 19, 19) 0%, rgb(26, 23, 23) 100%);
+    padding: 10px;
+}
+.background-color-dash{
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+.workout_individual{
+    border-radius: 10px;
+    margin-top: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.workout_title{
+    font-size: 20px;
+    font-family: sans-serif !important;
+    font-weight: 400;
+    padding-top: 10px;
+}
+.workout_title_week{
+    font-size: 18px;
+    font-family: sans-serif !important;
+    font-weight: 600;
+    padding-top: 4px;
+    padding-left: 15px;
+}
+.workout_title_day{
+    font-size: 18px;
+    font-family: sans-serif !important;
+    font-weight: 600;
+    padding-top: 4px;
+    padding-left: 100px;
+}
+.moon_graph{
+    padding-left: 30px;
+    
+}
+.water_graph{
+    margin-left: -30px; 
+}
+.graph_nutrition{
+    margin-left: -10px;
+}
+.workout_individual_moon{
+    border-radius: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+#my-glyphicon {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+/*Profile dashboard*/
+.profile_name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.profile_age{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    margin: 40px;
+}
+.profile_bio{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    margin: 40px;
+}
+.profile_meal1{
+    font-size: 25px;
+    font-family: sans-serif !important;
+    font-weight: 600;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.profile_meal{
+    font-size: 20px;
+    font-family: sans-serif !important;
+    font-weight: 400;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.profile_workout1{
+    font-size: 25px;
+    font-family: sans-serif !important;
+    font-weight: 600;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.profile_workout{
+    font-size: 20px;
+    font-family: sans-serif !important;
+    font-weight: 400;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.profile_picture{
+    border-radius: 20px !important;
+    display: flex;
+    justify-content: center;
+}
+.div_profile{
+    border-radius: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center !important;
+    flex-wrap: wrap !important;
+}
+/* Workout Dashboard*/
+.background-color-dash_w{
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+.workout_exercise_definition{
+    font-size: 20px;
+    font-family: sans-serif !important;
+    font-weight: 500;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*FOOTER*/
+.footer {
+    background: linear-gradient(90deg, rgb(20, 19, 19) 0%, rgb(26, 23, 23) 100%);
+    font-family: 'PT Sans';
+    color: #ffffff;
+}
+.footer_titles{
+    display: flex;
+    justify-content: center;
+
+}
+.footer_lists{
+    text-decoration: none !important;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+.media_icon{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+ul{
+    list-style-type: none;
+}
+.footer_logo{
+    display: flex;
+    justify-content: center;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 18px;
+}
