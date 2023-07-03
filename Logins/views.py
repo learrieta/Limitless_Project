@@ -16,13 +16,14 @@ from datetime import datetime
 
 def register(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()  # Save the User and get a reference to it
             UserProfile.objects.create(
                 user=user,
                 bio = form.cleaned_data['bio'],
                 age = form.cleaned_data['age'], 
+                profile_picture = form.cleaned_data['profile_picture'],
                 height = form.cleaned_data['height'] , # Height in meters
                 weight = form.cleaned_data['weight']  ,# Weight in kilograms
                 monthly_goals1 = form.cleaned_data['monthly_goals1'],
@@ -94,7 +95,7 @@ def user_profile(request):
         levels = 'A'
         training_level_name = 'Advanced'
         meal_name = 'coming soon'
-        work_name ='coming soon'
+        work_name ='12 Week Fat Destroyer: Complete Fat Loss'
     
     training_intensity = levels
     training_name = training_level_name
@@ -154,7 +155,7 @@ def user_dashboard(request):
         levels = 'A'
         training_level_name = 'Advanced'
         meal_name = 'coming soon'
-        work_name ='coming soon'
+        work_name ='12 Week Fat Destroyer: Complete Fat Loss'
     
     training_intensity = levels
     training_name = training_level_name

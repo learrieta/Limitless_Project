@@ -9,6 +9,7 @@ class SignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
     age = forms.CharField(max_length=20)
     bio = forms.CharField(max_length=19900)
+    profile_picture = forms.ImageField()
     height = forms.FloatField()  # Height in meters
     weight = forms.FloatField()  # Weight in kilograms
     monthly_goals1 = forms.CharField( max_length=1000)
@@ -19,7 +20,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('name', 'username', 'email','age', 'bio','height','weight','monthly_goals1','monthly_goals2','monthly_goals3','sleep_goals','water_goals', 'password1', 'password2')
+        fields = ('name', 'username', 'email','age', 'bio','profile_picture','height','weight','monthly_goals1','monthly_goals2','monthly_goals3','sleep_goals','water_goals', 'password1', 'password2')
 
     def save(self, commit=True):
         user = super().save(commit=False)
@@ -28,6 +29,7 @@ class SignUpForm(UserCreationForm):
         user.last_name = " ".join(name_parts[1:]) if len(name_parts) > 1 else ""
         user.email = self.cleaned_data['email']
         user.bio = self.cleaned_data['bio']
+        user.profile_picture = self.cleaned_data['profile_picture']
         user.height = self.cleaned_data['height']
         user.weight = self.cleaned_data['weight']
         user.monthly_goals1 = self.cleaned_data['monthly_goals1']
@@ -45,6 +47,7 @@ class UserProfileForm(forms.ModelForm):
     email = forms.EmailField(required=True)
     bio = forms.CharField(max_length=19900)
     age = forms.CharField(max_length=20)
+    profile_picture = forms.ImageField()
     height = forms.FloatField()  # Height in meters
     weight = forms.FloatField()  # Weight in kilograms
     monthly_goals1 = forms.CharField( max_length=1000)
@@ -54,4 +57,4 @@ class UserProfileForm(forms.ModelForm):
     water_goals = forms.CharField( max_length=1000)
     class Meta:
         model = UserProfile
-        fields = ('name',  'email','age','bio','height','weight','monthly_goals1','monthly_goals2','monthly_goals3','sleep_goals','water_goals')
+        fields = ('name',  'email','age','bio','profile_picture','height','weight','monthly_goals1','monthly_goals2','monthly_goals3','sleep_goals','water_goals')
