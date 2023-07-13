@@ -71,21 +71,21 @@
             {% endfor %}      
             </div>
             <div class="col bg-light p-4 border custom_border">
-                <div class="row">
-                    <p class="profile_workout1"> Meal Prep: </p>
-                </div>
+            {% for usm in userm %} 
                 <div class="row">
                     <p class="profile_workout"><strong>{{i.recommended_meal}}</strong></p>
                 </div>
+                
                 <div class="row bg-light p-1 border  workout_individual">
-                    <h5 class="workout_title" >helo</h5>
+                    <h5 class="workout_title" >{{usm.breakfast_plan.name}}</h5>
                 </div>
                 <div class="row bg-light p-1 border  workout_individual">
-                    <h5 class="workout_title" >helo</h5>
+                    <h5 class="workout_title" >{{usm.lunch_plan.name}}</h5>
                 </div>
                 <div class="row bg-light p-1 border  workout_individual">
-                    <h5 class="workout_title" >helo</h5> 
+                    <h5 class="workout_title" >{{usm.dinner_plan.name}}</h5> 
                 </div>
+            {% endfor %}    
             </div>
         </div>
         {% endfor %}

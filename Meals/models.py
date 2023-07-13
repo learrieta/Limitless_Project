@@ -1,20 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from Meals.models import *
 
-class MealPlan(models.Model):
-    MEAL_TYPE_CHOICES = [
-        ('B', 'Breakfast'),
-        ('L', 'Lunch'),
-        ('D', 'Dinner'),
-    ]
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
-    meal_type = models.CharField(max_length=1, choices=MEAL_TYPE_CHOICES)
-    start_date = models.DateField()
-    end_date = models.DateField()
 
-    def __str__(self):
-        return self.name
 
 class Meal(models.Model):
     MEAL_TYPE_CHOICES = [
@@ -29,13 +17,28 @@ class Meal(models.Model):
     prep_time = models.IntegerField()  # Preparation time in minutes
     cook_time = models.IntegerField()  # Cooking time in minutes
     servings = models.IntegerField()  # Number of servings
-    meal_plan = models.ForeignKey(MealPlan, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return self.name
 
+class MealPlan(models.Model):
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    breakfast_plan = models.ForeignKey(Meal,null=True,related_name='breakfast_plan', on_delete=models.CASCADE)
+    lunch_plan = models.ForeignKey(Meal,null=True, related_name='lunch_plan', on_delete=models.CASCADE)
+    dinner_plan = models.ForeignKey(Meal,null=True, related_name='dinner_plan', on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        return self.name
+
+
 class Nutrition(models.Model):
     meal = models.OneToOneField(Meal, on_delete=models.CASCADE)
+    name = models.CharField(default = 'blank',max_length=255)
     protein = models.FloatField()  # Protein in grams
     carbohydrates = models.FloatField()  # Carbohydrates in grams
     fats = models.FloatField()  # Fats in grams

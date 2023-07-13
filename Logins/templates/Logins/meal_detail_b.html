@@ -1,0 +1,181 @@
+{% load static %}
+{% block content %}
+<div class="container-fluid background-color-dash_w">
+    
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    {% for userm in project %} 
+                        <div class="col-md-6">
+                            <div>
+                                <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{userm.breakfast_plan.name}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Ingredients:</strong>&nbsp; {{userm.breakfast_plan.ingredients}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Calories:</strong>&nbsp; {{userm.breakfast_plan.calories}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Prep Time: </strong>&nbsp;{{userm.breakfast_plan.prep_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Cook Time:</strong>&nbsp; {{userm.breakfast_plan.cook_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Servings:</strong> &nbsp;{{userm.breakfast_plan.servings}}</h5>
+                            </div> 
+                        </div>
+                    {% endfor %}
+                    {%  for bb in nuts1 %}
+                        <div class="col-md-6 bg-light p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Nutrition</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="row bg-light p-2 border  workout_individual_moon">
+                                        <h5 ><strong>Protein:</strong>&nbsp;{{bb.protein}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Carbohydrates:</strong>&nbsp;{{bb.carbohydrates}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fats:</strong>&nbsp;{{bb.fats}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fiber:</strong>&nbsp;{{bb.fiber}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/oegrrprk.json"
+                                        trigger="hover"
+                                        colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#646e78,quaternary:#121331"
+                                        style="width:180px;height:180px"
+                                        class="graph_nutrition">
+                                        
+                                    </lord-icon>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %} 
+                </div>
+            </div>
+    
+    
+
+
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    {% for userm in project %} 
+                        <div class="col-md-6">
+                            <div>
+                                <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{userm.lunch_plan.name}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Ingredients:</strong>&nbsp; {{userm.lunch_plan.ingredients}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Calories:</strong>&nbsp; {{userm.lunch_plan.calories}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Prep Time: </strong>&nbsp;{{userm.lunch_plan.prep_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Cook Time:</strong>&nbsp; {{userm.lunch_plan.cook_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Servings:</strong> &nbsp;{{userm.lunch_plan.servings}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Servings:</strong> &nbsp;{{userm.lunch_plan.servings}}</h5>
+                            </div> 
+                        </div>
+                    {% endfor %}
+                    {%  for bb in nuts2 %}
+                        <div class="col-md-6 bg-light p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Nutrition</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="row bg-light p-2 border  workout_individual_moon">
+                                        <h5 ><strong>Protein:</strong>&nbsp;{{bb.protein}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Carbohydrates:</strong>&nbsp;{{bb.carbohydrates}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fats:</strong>&nbsp;{{bb.fats}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fiber:</strong>&nbsp;{{bb.fiber}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/oegrrprk.json"
+                                        trigger="hover"
+                                        colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#646e78,quaternary:#121331"
+                                        style="width:180px;height:180px"
+                                        class="graph_nutrition">
+                                        
+                                    </lord-icon>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %} 
+                   
+                </div>
+            </div>
+   
+
+     
+            <div class="container">
+                <div class="row bg-light p-1 border  workout_individual">
+                    {% for userm in project %}
+                        <div class="col-md-6">
+                            <div>
+                                <h5 class="workout_exercise_definition" > <strong>Name:</strong>&nbsp; {{userm.dinner_plan.name}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Ingredients:</strong>&nbsp; {{userm.dinner_plan.ingredients}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Calories:</strong>&nbsp; {{userm.dinner_plan.calories}}</h5>
+                                <h5 class="workout_exercise_definition" > <strong>Prep Time: </strong>&nbsp;{{userm.dinner_plan.prep_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Cook Time:</strong>&nbsp; {{userm.dinner_plan.cook_time}}</h5>
+                                <h5 class="workout_exercise_definition" ><strong>Servings:</strong> &nbsp;{{userm.dinner_plan.servings}}</h5>
+                            </div> 
+                        </div>
+                    {% endfor %}
+                    {%  for bb in nuts3 %}
+                        <div class="col-md-6 bg-light p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Nutrition</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="row bg-light p-2 border  workout_individual_moon">
+                                        <h5 ><strong>Protein:</strong>&nbsp;{{bb.protein}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Carbohydrates:</strong>&nbsp;{{bb.carbohydrates}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fats:</strong>&nbsp;{{bb.fats}}</h5>
+                                    </div>
+                                    <div class="row bg-light p-2 border workout_individual_moon">
+                                        <h5><strong>Fiber:</strong>&nbsp;{{bb.fiber}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/oegrrprk.json"
+                                        trigger="hover"
+                                        colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#646e78,quaternary:#121331"
+                                        style="width:180px;height:180px"
+                                        class="graph_nutrition">
+                                        
+                                    </lord-icon>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %} 
+                </div>
+            </div>
+    
+</div>
+{% endblock %}

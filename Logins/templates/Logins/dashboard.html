@@ -120,16 +120,40 @@
                 <div class="col-md-6">
                     <h5 class="workout_title_day" style="color: #8d939f;" >Today <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
                 </div>
-            </div>        
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5>
-            </div>
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5>
-            </div>
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5> 
-            </div>
+            </div>      
+            {% for usm in userm %} 
+                {% if usm.name == 'Mediterranean Plan' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_b' %}"><h5 class="workout_title" >{{usm.breakfast_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_b' %}"><h5 class="workout_title" >{{usm.lunch_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_b' %}"><h5 class="workout_title" >{{usm.dinner_plan.name}}</h5> </a>
+                    </div>
+                {% elif usm.name == 'DASH Diet Plan' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_i' %}"><h5 class="workout_title" >{{usm.breakfast_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_i' %}"><h5 class="workout_title" >{{usm.lunch_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_i' %}"><h5 class="workout_title" >{{usm.dinner_plan.name}}</h5> </a>
+                    </div>
+                {% elif usm.name == 'Whole30 Plan' %}
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_a' %}"><h5 class="workout_title" >{{usm.breakfast_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_a' %}"><h5 class="workout_title" >{{usm.lunch_plan.name}}</h5></a>
+                    </div>
+                    <div class="row bg-light p-1 border  workout_individual">
+                        <a href="{% url 'user_meal_a' %}"><h5 class="workout_title" >{{usm.dinner_plan.name}}</h5> </a>
+                    </div>
+                {% endif %}
+            {% endfor %} 
         </div>
     </div>
     <div class="row">         
@@ -177,37 +201,6 @@
         </div>
         
         
-        <div class="col bg-light p-4 border custom_border">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Nutrition</h4>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="workout_title_week" style="color: #8d939f;" >Daily <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="row bg-light p-2 border  workout_individual_moon">
-                        <h5 >helo</h5>
-                    </div>
-                    <div class="row bg-light p-2 border workout_individual_moon">
-                        <h5>helo</h5>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-                    <lord-icon
-                        src="https://cdn.lordicon.com/oegrrprk.json"
-                        trigger="hover"
-                        colors="primary:#4bb3fd,secondary:#ffc738,tertiary:#646e78,quaternary:#121331"
-                        style="width:180px;height:180px"
-                        class="graph_nutrition">
-                        
-                    </lord-icon>
-                </div>
-            </div>
-        </div>
     </div>
     
     <div class="row">
@@ -244,25 +237,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="col bg-light p-4 border custom_border">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Latest News!</h4>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="workout_title_week" style="color: #8d939f;" >Weekly <i class="fa-solid fa-caret-down" style="color: #8d939f;"></i></h5>
-                </div>
-            </div>        
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5>
-            </div>
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5>
-            </div>
-            <div class="row bg-light p-1 border  workout_individual">
-                <h5 class="workout_title" >helo</h5>
-            </div>
-        </div>
+
         <div class="col bg-light p-4 border custom_border">
             <div class="row">
                 <div class="col-md-6">

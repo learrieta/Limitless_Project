@@ -10,6 +10,7 @@ from django.shortcuts import get_object_or_404
 from recommendations.models import Recommendation
 from .forms import UserProfileForm
 from Workouts.models import Workout, WorkoutExercise, Exercise
+from Meals.models import *
 from datetime import datetime
 
 
@@ -83,18 +84,18 @@ def user_profile(request):
     if intensity <= 10:
         levels = 'B'
         training_level_name = 'Beginner'
-        meal_name = 'coming soon'
+        meal_name = 'Mediterranean Plan'
         work_name ='5 Weeks to Your Best Body Ever'
         
     elif intensity > 11 and intensity <= 20:
         levels = 'I'
         training_level_name = 'Intermediate'
-        meal_name = 'coming soon'
+        meal_name = 'DASH Diet Plan'
         work_name ='Mass Building Hypertrophy Workout'
     elif intensity > 20:
         levels = 'A'
         training_level_name = 'Advanced'
-        meal_name = 'coming soon'
+        meal_name = 'Whole30 Plan'
         work_name ='12 Week Fat Destroyer: Complete Fat Loss'
     
     training_intensity = levels
@@ -116,8 +117,9 @@ def user_profile(request):
 
     current_date = datetime.now()
     today = current_date.strftime('%A')
+    assign_meal = MealPlan.objects.filter(name = recommended_meal_name )
     assign_workout = WorkoutExercise.objects.filter(training_level = training_intensity)
-    context = {'userp' : user_profile, 'usere' : assign_workout, 'dayof': today }
+    context = {'userp' : user_profile, 'usere' : assign_workout, 'userm': assign_meal, 'dayof': today }
     return render(request,'Logins/profile_dashboard.html', context) 
 
 @login_required
@@ -144,17 +146,18 @@ def user_dashboard(request):
     if intensity <= 10:
         levels = 'B'
         training_level_name = 'Beginner'
-        meal_name = 'coming soon'
-        work_name ='5 Weeks to Your Best Body Ever' 
+        meal_name = 'Mediterranean Plan'
+        work_name ='5 Weeks to Your Best Body Ever'
+        
     elif intensity > 11 and intensity <= 20:
         levels = 'I'
         training_level_name = 'Intermediate'
-        meal_name = 'coming soon'
+        meal_name = 'DASH Diet Plan'
         work_name ='Mass Building Hypertrophy Workout'
     elif intensity > 20:
         levels = 'A'
         training_level_name = 'Advanced'
-        meal_name = 'coming soon'
+        meal_name = 'Whole30 Plan'
         work_name ='12 Week Fat Destroyer: Complete Fat Loss'
     
     training_intensity = levels
@@ -174,8 +177,10 @@ def user_dashboard(request):
     stores = results"""
     current_date = datetime.now()
     today = current_date.strftime('%A')
+    assign_meal = MealPlan.objects.filter(name = recommended_meal_name )
+    print(assign_meal)
     assign_workout = WorkoutExercise.objects.filter(training_level = training_intensity)
-    context = {'userp' : user_profile, 'usere' : assign_workout, 'dayof': today }
+    context = {'userp' : user_profile, 'usere' : assign_workout, 'userm': assign_meal, 'dayof': today }
     return render(request,'Logins/side_navbar.html', context) 
 
 
@@ -188,6 +193,8 @@ def user_workout_b(request):
     #reviews = projectObj.review_set.all()
     context = {'project' : projectObj,'dayof': today }
     return render(request, 'Logins/workout_dashboard_b.html', context)
+
+@login_required
 def user_workout_i(request):
     current_date = datetime.now()
     today = current_date.strftime('%A')
@@ -196,6 +203,8 @@ def user_workout_i(request):
     #reviews = projectObj.review_set.all()
     context = {'project' : projectObj,'dayof': today }
     return render(request, 'Logins/workout_dashboard_i.html', context)
+
+@login_required
 def user_workout_a(request):
     current_date = datetime.now()
     today = current_date.strftime('%A')
@@ -205,6 +214,54 @@ def user_workout_a(request):
     context = {'project' : projectObj,'dayof': today }
     return render(request, 'Logins/workout_dashboard_a.html', context)
 
+
+
+
+
+
+
+
+
+
+@login_required
+def user_meal_b(request):
+    current_date = datetime.now()
+    today = current_date.strftime('%A')
+    projectObj = MealPlan.objects.filter(name = 'Mediterranean Plan')
+    nutrients1 = Nutrition.objects.filter(name = 'Oatmeal')
+    nutrients2= Nutrition.objects.filter(name = 'Chicken Salad')
+    nutrients3= Nutrition.objects.filter(name = 'Beef Steak')
+    print(projectObj)
+    #tags = projectObj.tags.all()
+    #reviews = projectObj.review_set.all()
+    context = {'project' : projectObj,  'nuts1':nutrients1,'nuts2':nutrients2,'nuts3':nutrients3, 'dayof': today }
+    return render(request, 'Logins/meal_dashboard_b.html', context)
+
+@login_required
+def user_meal_i(request):
+    current_date = datetime.now()
+    today = current_date.strftime('%A')
+    projectObj = MealPlan.objects.filter(name = 'DASH Diet Plan')
+    nutrients1 = Nutrition.objects.filter(name = 'Quinoa Salad')
+    nutrients2= Nutrition.objects.filter(name = 'Vegetable Curry')
+    nutrients3= Nutrition.objects.filter(name = 'Salmon Fillet')
+    #tags = projectObj.tags.all()
+    #reviews = projectObj.review_set.all()
+    context = {'project' : projectObj,  'nuts1':nutrients1,'nuts2':nutrients2,'nuts3':nutrients3, 'dayof': today }
+    return render(request, 'Logins/meal_dashboard_i.html', context)
+
+@login_required
+def user_meal_a(request):
+    current_date = datetime.now()
+    today = current_date.strftime('%A')
+    projectObj = MealPlan.objects.filter(name = 'Whole30 Plan')
+    nutrients1 = Nutrition.objects.filter(name = 'Scrambled Eggs and Avocado')
+    nutrients2= Nutrition.objects.filter(name = 'Grilled Chicken and Veggies')
+    nutrients3= Nutrition.objects.filter(name = 'Shrimp Pasta')
+    #tags = projectObj.tags.all() Whole30 Plan
+    #reviews = projectObj.review_set.all()
+    context = {'project' : projectObj,  'nuts1':nutrients1,'nuts2':nutrients2,'nuts3':nutrients3, 'dayof': today }
+    return render(request, 'Logins/meal_dashboard_a.html', context)
 
 # def update_profile(request):
 #     if request.method == 'POST':
